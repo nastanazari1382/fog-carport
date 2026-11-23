@@ -1,0 +1,58 @@
+---
+title: Domænemodel v1
+---
+classDiagram
+    direction TB
+
+    class Kunde {
+        navn
+        email
+        telefon
+        adresse
+    }
+
+    class Saelger["Sælger"] {
+        navn
+        email
+    }
+
+    class Ordre {
+        dato
+        status
+        salgspris
+    }
+
+    class Carport {
+        bredde
+        længde
+        højde
+        tagtype
+    }
+
+    class Stykliste {
+        indkøbspris
+    }
+
+    class Styklistelinje {
+        antal
+        længde
+        beskrivelse
+    }
+
+    class Materiale {
+        varenummer
+        navn
+        enhed
+        pris pr. enhed
+    }
+
+    Kunde "1" -- "0..*" Ordre : afgiver
+    Saelger "0..1" -- "0..*" Ordre : behandler
+    Ordre "1" -- "1" Carport : gælder
+    Carport "1" -- "1" Stykliste : har
+    Stykliste "1" -- "1..*" Styklistelinje : består af
+    Styklistelinje "0..*" -- "1" Materiale : bruger
+
+    note for Ordre "status: forespørgsel - tilbud sendt - betalt (eller afvist)"
+    note for Carport "Vi afgrænser til fladt tag uden skur"
+    note for Stykliste "Indkøbspris beregnes (summen af linjerne)"

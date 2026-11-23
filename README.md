@@ -10,7 +10,7 @@ Når kunden har betalt, kan han se styklisten.
 
 | Navn | GitHub | Email |
 |---|---|---|
-| Nastaran Nazari (Rosa Nielsen) | [@nastanazari1382](https://github.com/nastanazari1382) | cph-nn249@stud.ek.dk |
+| Rosa Nielsen | [@nastanazari1382](https://github.com/nastanazari1382) | cph-nn249@stud.ek.dk |
 | Rebecca Støjko Andersen | [@rean0002](https://github.com/rean0002) | rean0002@stud.ek.dk |
 
 ## Links
