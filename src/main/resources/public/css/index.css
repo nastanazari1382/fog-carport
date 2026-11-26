@@ -1,0 +1,97 @@
+/* ---------- Forside ---------- */
+.hero {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.hero-text,
+.image-placeholder {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    width: 100%;
+    max-width: 460px;
+    border-radius: 4px;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    font-size: 28px;
+    color: var(--fog-blue);
+}
+
+.hero p {
+    margin: 0 0 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
+
+.image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    background-color: var(--footer-bg);
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+
+.steps {
+    margin-top: 36px;
+}
+
+.steps h2 {
+    font-size: 18px;
+    margin: 0 0 16px;
+}
+
+.step-list {
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+}
+
+.step-list li {
+    flex: 1;
+    padding-top: 14px;
+    border-top: 2px solid #DCD9D1;
+    counter-increment: step;
+}
+
+.step-list li::before {
+    content: counter(step);
+    font-weight: 700;
+    color: var(--fog-blue);
+}
+
+.step-list h3 {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+.step-list p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ---------- Forside på mobil ---------- */
+@media (max-width: 600px) {
+    .hero,
+    .step-list {
+        flex-direction: column;
+    }
+
+    .image-placeholder {
+        width: 100%;
+    }
+}

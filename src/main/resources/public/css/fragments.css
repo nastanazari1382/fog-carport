@@ -1,0 +1,65 @@
+/* ---------- Navbar ---------- */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--fog-blue);
+    padding: 12px 20px;
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 24px;
+}
+
+.navbar-links a {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    display: flex;
+    gap: 60px;
+    background-color: var(--footer-bg);
+    padding: 16px 20px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.footer-column strong {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.footer-column span {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* ---------- Mobil ---------- */
+@media (max-width: 600px) {
+    .navbar,
+    .footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

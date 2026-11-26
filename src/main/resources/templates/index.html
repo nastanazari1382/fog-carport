@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="da" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carporte · Fog</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/fragments.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<main>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Carporte fra Fog</h1>
+            <p>
+                Byg din egen carport med fladt tag. Vælg bredde og længde,
+                så sender en af vores sælgere dig et tilbud.
+                Du behøver ikke at logge ind.
+            </p>
+
+            <div class="buttons">
+                <a href="/carport" class="button button-primary">Vælg mål</a>
+                <a href="/offer/find" class="button button-secondary">Find mit tilbud</a>
+            </div>
+        </div>
+
+        <img src="/images/carport.webp" alt="Carport med fladt tag" class="hero-image">
+    </section>
+
+    <section class="steps">
+        <h2>Sådan foregår det</h2>
+
+        <ol class="step-list">
+            <li>
+                <h3>Vælg mål</h3>
+                <p>Vælg bredde og længde, og skriv dine kontaktoplysninger.</p>
+            </li>
+            <li>
+                <h3>Få et tilbud</h3>
+                <p>En sælger ser din forespørgsel igennem og sender dig en pris.</p>
+            </li>
+            <li>
+                <h3>Betal og få styklisten</h3>
+                <p>Når du har betalt, kan du se styklisten med alle materialer.</p>
+            </li>
+        </ol>
+    </section>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>
