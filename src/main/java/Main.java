@@ -1,5 +1,8 @@
 
+import configuration.ThymeleafConfig;
+import controllers.MainController;
 import io.javalin.Javalin;
+import io.javalin.rendering.template.JavalinThymeleaf;
 import persistence.ConnectionPool;
 
 public class Main {
@@ -11,8 +14,11 @@ public class Main {
     private static final ConnectionPool connectionPool = ConnectionPool.getInstance(USER, PASSWORD, URL, DB);
 
     public static void main(String[] args) {
-        Javalin app = Javalin.create().start(7070);
+        Javalin app = Javalin.create(config -> {
+            config.staticFiles.add("/public");
+            config.fileRenderer(new JavalinThymeleaf(ThymeleafConfig.templateEngine()));
+        }).start(7070);
 
-        app.get("/", ctx -> ctx.result("Fog Carport kører"));
+        new MainController(connectionPool).addRoutes(app);
     }
 }
