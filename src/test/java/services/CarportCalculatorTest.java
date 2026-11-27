@@ -82,6 +82,7 @@ class CarportCalculatorTest {
         assertEquals(13, widths.size());
     }
 
+
     // The length list should start at 240, end at 780 and have 19 options
     @Test
     void lengthOptionsAreCorrect() {
